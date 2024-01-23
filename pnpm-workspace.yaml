@@ -1,0 +1,5 @@
+packages:
+  - packages/* # 存放组件库
+  - docs # 组件文档
+  - play # 组件测试代码
+  - internal/*
