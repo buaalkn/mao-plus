@@ -1,0 +1,5 @@
+$namespace: 'm' !default; // 所有的组件以m开头，如 m-input
+$common-separator: '-' !default; // 公共的连接符
+$element-separator: '__' !default; // 元素以__分割，如 m-input__inner
+$modifier-separator: '--' !default; // 修饰符以--分割，如 m-input--mini
+$state-prefix: 'is-' !default; // 状态以is-开头，如 is-disabled

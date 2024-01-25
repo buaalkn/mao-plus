@@ -37,6 +37,7 @@
     "npm-run-all2": "^6.1.1",
     "prettier": "^3.0.3",
     "pretty-quick": "^4.0.0",
+    "sass": "^1.70.0",
     "typescript": "~5.3.0",
     "unplugin-vue-define-options": "^1.4.2",
     "unplugin-vue-macros": "^2.7.10",
