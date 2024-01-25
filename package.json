@@ -18,6 +18,7 @@
   "dependencies": {
     "@mao-plus/components": "workspace:*",
     "@mao-plus/eslint-config": "workspace:*",
+    "@mao-plus/hooks": "workspace:^",
     "@mao-plus/theme-chalk": "workspace:*",
     "@mao-plus/utils": "workspace:*"
   },
@@ -37,6 +38,8 @@
     "prettier": "^3.0.3",
     "pretty-quick": "^4.0.0",
     "typescript": "~5.3.0",
+    "unplugin-vue-define-options": "^1.4.2",
+    "unplugin-vue-macros": "^2.7.10",
     "vite": "^5.0.10",
     "vue": "^3.3.11",
     "vue-tsc": "^1.8.25"
