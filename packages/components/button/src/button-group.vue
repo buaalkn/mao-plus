@@ -18,6 +18,6 @@ provide(
   reactive({
     size: toRef(props, 'size'),
     type: toRef(props, 'type'),
-  }),
+  })
 )
 </script>

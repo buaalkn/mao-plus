@@ -7,5 +7,5 @@ export interface ButtonGroupContext {
 }
 
 export const buttonGroupContextKey: InjectionKey<ButtonGroupContext> = Symbol(
-  'buttonGroupContextKey',
+  'buttonGroupContextKey'
 )
