@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      '@element-plus/icons-vue':
+        specifier: ^2.3.1
+        version: 2.3.1(vue@3.4.15)
       '@mao-plus/components':
         specifier: workspace:*
         version: link:packages/components
@@ -136,7 +139,7 @@ importers:
         specifier: ^3.0.0
         version: 3.0.1(eslint@8.56.0)
       eslint-plugin-prettier:
-        specifier: ^4.1.0
+        specifier: ^4.2.1
         version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.56.0)(prettier@2.8.8)
       eslint-plugin-unicorn:
         specifier: ^43.0.2
@@ -501,6 +504,17 @@ packages:
       search-insights: 2.13.0
     transitivePeerDependencies:
       - '@algolia/client-search'
+    dev: false
+
+  /@element-plus/icons-vue@2.3.1(vue@3.4.15):
+    resolution:
+      {
+        integrity: sha512-XxVUZv48RZAd87ucGS48jPf6pKu0yV5UCg9f4FFwtrYxXOwWuVJo6wOvSLKEoMQKjv8GsX/mhP6UsC1lRwbUWg==,
+      }
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.4.15(typescript@5.3.3)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.11:
