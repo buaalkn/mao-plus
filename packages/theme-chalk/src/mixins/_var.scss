@@ -31,14 +31,18 @@
 
 @mixin set-css-color-type($colors, $type) {
   // 生成 --el-color-#{$type}
- @include set-css-var-value(('color', $type), map.get($colors, $type, 'base'));
+  @include set-css-var-value(('color', $type), map.get($colors, $type, 'base'));
   // 生成 --el-color-#{$type}-light-{$i}
- @each $i in (3, 5, 7, 8, 9) {
-   @include set-css-var-value(
-     ('color', $type, 'light', $i),
-     map.get($colors, $type, 'light-#{$i}')
-   );
- }
+  @each $i in (3, 5, 7, 8, 9) {
+    @include set-css-var-value(
+      ('color', $type, 'light', $i),
+      map.get($colors, $type, 'light-#{$i}')
+    );
+  }
+  @include set-css-var-value(
+    ('color', $type, 'dark-2'),
+    map.get($colors, $type, 'dark-2')
+  );
 }
 
 // for example:

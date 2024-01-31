@@ -35,6 +35,11 @@
   @include set-component-css-var('text-color', $text-color);
   // --el-border-color-#{$type}
   @include set-component-css-var('border-color', $border-color);
+  // Fill --el-fill-color-#{$type}
+  @include set-component-css-var('fill-color', $fill-color);
+
+  // Disable base
+  @include set-component-css-var('disabled', $disabled);
 
   // Border
   @include set-css-var-value('border-width', $border-width);

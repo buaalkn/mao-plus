@@ -21,7 +21,7 @@ export const buttonProps = {
     default: false,
   },
   size: {
-    type: [Number, String] as PropType<number | string>,
+    type: String,
   },
   icon: {
     type: [Object, String] as PropType<object | string>,
@@ -34,6 +34,9 @@ export const buttonProps = {
   circle: {
     type: Boolean,
     default: false,
+  },
+  color: {
+    type: String,
   },
 } as const
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>

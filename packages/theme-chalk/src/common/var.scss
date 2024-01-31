@@ -69,6 +69,11 @@ $color-info: map.get($colors, 'info', 'base') !default;
   }
 }
 
+// --el-color-primary-dark-2
+@each $type in $types {
+  @include set-color-mix-level($type, 2, 'dark', $color-black);
+}
+
 $text-color: () !default;
 $text-color: map.merge(
   (
@@ -92,6 +97,20 @@ $border-color: map.merge(
     'darker': #cdd0d6,
   ),
   $border-color
+);
+
+$fill-color: () !default;
+$fill-color: map.merge(
+  (
+    '': #f0f2f5,
+    'light': #f5f7fa,
+    'lighter': #fafafa,
+    'extra-light': #fafcff,
+    'dark': #ebedf0,
+    'darker': #e6e8eb,
+    'blank': #ffffff,
+  ),
+  $fill-color
 );
 
 $bg-color: () !default;
@@ -134,6 +153,17 @@ $font-size: map.merge(
   $font-size
 );
 
+// Disable default
+$disabled: () !default;
+$disabled: map.merge(
+  (
+    'bg-color': getCssVar('fill-color', 'light'),
+    'text-color': getCssVar('text-color', 'placeholder'),
+    'border-color': getCssVar('border-color', 'light'),
+  ),
+  $disabled
+);
+
 $common-component-size: () !default;
 $common-component-size: map.merge(
   (
@@ -174,6 +204,30 @@ $button: map.merge(
 );
 
 $button-border-width: $border-width !default;
+
+// need mix, so do not use css var
+$button-hover-tint-percent: 20%;
+$button-active-shade-percent: 10%;
+
+$button-border-color: () !default;
+$button-bg-color: () !default;
+$button-text-color: () !default;
+
+@each $type in $types {
+  $button-border-color: map.merge(
+    (
+      $type: map.get($colors, $type, 'base'),
+    ),
+    $button-border-color
+  ) !global;
+
+  $button-bg-color: map.merge(
+    (
+      $type: map.get($colors, $type, 'base'),
+    ),
+    $button-bg-color
+  ) !global;
+}
 
 $button-font-size: () !default;
 $button-font-size: map.merge(
