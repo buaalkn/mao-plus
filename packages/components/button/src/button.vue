@@ -1,5 +1,6 @@
 <template>
   <button
+    v-bind="_props"
     :class="[
       ns.b(),
       ns.m(_type),
@@ -28,17 +29,20 @@ defineOptions({
   name: 'MButton',
 })
 const props = defineProps(buttonProps)
-const emit = defineEmits(['handle'])
+const emit = defineEmits(['click'])
 
 const buttonStyle = useButtonCustomStyle(props)
 const ns = useNamespace('button')
 // 点击事件函数
 const handleClick = (evt: MouseEvent) => {
-  emit('handle', evt)
+  emit('click', evt)
 }
 const buttonGroupContext = inject(buttonGroupContextKey, undefined)
 const _size = computed(() => props.size || buttonGroupContext?.size)
 const _type = computed(() => props.type || buttonGroupContext?.type)
+const _props = computed(() => ({
+  disabled: props.disabled,
+}))
 defineExpose({
   handleClick,
 })
