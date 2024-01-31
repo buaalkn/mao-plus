@@ -30,7 +30,7 @@ const handleClick = (evt: MouseEvent) => {
   emit('handle', evt)
 }
 const buttonGroupContext = inject(buttonGroupContextKey, undefined)
-const _size = computed(() => props.size || buttonGroupContext?.size)
+// const _size = computed(() => props.size || buttonGroupContext?.size)
 const _type = computed(() => props.type || buttonGroupContext?.type)
 defineExpose({
   handleClick,
