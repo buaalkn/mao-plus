@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <m-button>hello</m-button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../dist/mao-plus/dist/index.full.js"></script>
+    <!-- <link rel="stylesheet" href="../packages/theme-chalk/src/index.scss" /> -->
+    <script>
+      const { createApp, ref } = Vue
+      const App = {
+        setup() {
+          const message = ref('浏览器引用组件库包')
+          return {
+            message,
+          }
+        },
+      }
+      const app = Vue.createApp(App)
+      app.use(MaoPlus)
+      app.mount('#app')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "mao-plus",
+  "version": "0.0.0-dev.1",
+  "description": "A Component Library for Vue 3",
+  "license": "MIT",
+  "main": "lib/index.cjs",
+  "module": "es/index.mjs",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "@vueuse/core": "^9.1.0",
+    "async-validator": "^4.2.5"
+  },
+  "devDependencies": {}
+}
