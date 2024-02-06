@@ -5,5 +5,16 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "main": "index.css"
+  "main": "index.css",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "gulp --require @esbuild-kit/cjs-loader"
+  },
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.4",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0"
+  }
 }
